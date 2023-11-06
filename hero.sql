@@ -180,3 +180,10 @@ SELECT p.player_name, h.hero_name
 FROM Player p
 JOIN Hero h ON p.hero_id = h.hero_id
 WHERE h.is_active = 'true';
+
+--6	Create new branch named "feat/select-heroes-archers"
+
+-- List of hero/es classified as archers
+SELECT DISTINCT Hero.hero_name
+FROM Hero
+WHERE class_id IN (104,105);
